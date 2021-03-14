@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:insert="header :: header_template">
+    <title id="title">No Results</title>
+    <!-- import header part-->
+</head>
+<body>
+    <!-- import menu-->
+    <div th:insert="menu :: menu_template"></div>
+
+    <main class="main_body">
+        <br><br>
+        <h1 class="heading">Sorry, there are no results</h1><br>
+        <div class="wrapper">
+            <a th:href="@{/agreement/create/selectDates}"><button class="btn-action" style="font-size: 14px">New search</button></a>
+        </div>
+    </main>
+    <!-- import footer-->
+    <div th:insert="footer :: footer_template"></div>
+</body>
+</html>

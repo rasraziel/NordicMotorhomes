@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!--Dimitrios-->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:insert="header :: header_template">
+    <title id="title">Update Agreement</title>
+    <!-- import header part-->
+</head>
+<body>
+<!-- import menu-->
+<div th:insert="menu :: menu_template"></div>
+
+<!-- back button-->
+<div class="btn-undermenu">
+    <a th:href="@{/agreement/viewAgreements}">
+        <img src="http://localhost:8080/SVG/arrow-left-solid.svg" class="svg undermenu_button" height="30" width="30">
+        <button class="btn-back" style="cursor: pointer"><strong>BACK</strong></button>
+    </a>
+</div>
+
+
+<main class="main_body">
+
+    <h1 class="heading">Update Agreement</h1><br>
+
+    <form th:action="@{'/agreement/saveUpdate/'+${agreement.id}}"  th:object="${itemList}" method="post">
+        <fieldset>
+            <p>Renter</p>
+            <label>First Name:</label>
+            <input readonly class="read-only" name="renter.firstName" th:value="${agreement.renter.firstName}"><br>
+            <label>Last Name:</label>
+            <input readonly class="read-only" name="renter.lastName" th:value="${agreement.renter.lastName}"><br>
+        </fieldset><br>
+        <fieldset>
+            <p>Vehicle</p>
+            <label>Plate:</label>
+            <input readonly class="read-only" th:value="${agreement.vehicle.plates}"><br>
+            <label>Brand:</label>
+            <input readonly class="read-only" th:value="${agreement.vehicle.brand}"><br>
+            <label>Model:</label>
+            <input readonly class="read-only" th:value="${agreement.vehicle.model}"><br>
+            <label>Beds:</label>
+            <input readonly class="read-only" th:value="${agreement.vehicle.beds}"><br>
+            <label>Price:</label>
+            <input readonly class="read-only" th:value="${agreement.vehicle.price}"><br>
+        </fieldset><br>
+        <fieldset>
+            <p>Dates</p>
+            <label>Start Date:</label>
+            <input readonly class="read-only" th:value="${agreement.startDate}"><br>
+            <label>End Date:</label>
+            <input readonly class="read-only" th:value="${agreement.endDate}"><br>
+        </fieldset><br>
+        <fieldset>
+            <p>Pick-up and drop-off points</p>
+            <label for="pickUpPoint">Pick-up:</label><br>
+            <input type="number" min="0" max="2147483647" title="Only numeric characters." id="pickUpPoint" name="pickUpPoint" placeholder="ex. 45" th:value="${agreement.pickUpPoint}"><br>
+            <label for="dropOffPoint">Drop-off:</label><br>
+            <input type="number" min="0" max="2147483647" title="Only numeric characters." id="dropOffPoint" name="dropOffPoint" placeholder="ex. 45" th:value="${agreement.dropOffPoint}"><br>
+            <br>
+        </fieldset> <br>
+        <fieldset>
+            <p>Extra charges</p><!-- Marianna -->
+            <div th:each="item, itemStat: *{items}">
+                <label th:text="*{items[__${itemStat.index}__].name}"></label>
+                <input type="number" min ="0" th:name="${item.name}" th:field="*{items[__${itemStat.index}__].quantity}" th:value="*{items[__${itemStat.index}__].quantity}">
+                <input type="number" hidden  th:field="*{items[__${itemStat.index}__].id}" th:value="*{items[__${itemStat.index}__].id}"><br>
+                <input type="text" hidden  th:field="*{items[__${itemStat.index}__].name}" th:value="*{items[__${itemStat.index}__].name}">
+                <input type="number" hidden  th:field="*{items[__${itemStat.index}__].price}" th:value="*{items[__${itemStat.index}__].price}">
+            </div>
+        </fieldset> <br>
+        <input class="btn-submit-add" type="submit" value="Submit">
+    </form>
+</main>
+<!-- import footer-->
+<div th:insert="footer :: footer_template"></div>
+</body>
+</html>

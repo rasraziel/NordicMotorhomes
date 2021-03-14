@@ -1,0 +1,585 @@
+/* Set the general font and font-color on the website */
+body, button{
+    font-family: Tahoma, sans-serif ;
+    color: #324960;
+    margin: 0;
+}
+
+/* Style menu */
+.flex-container{
+    display: flex;
+    margin : 0;
+    padding: 0%;
+}
+
+button.menu_item{
+    border: 0;
+    background: none;
+}
+
+a.menu_link{
+    flex-grow: 1;
+    margin-top: 15px;
+}
+
+a.menu_link:hover{
+    filter: invert(55%) sepia(39%) saturate(689%) hue-rotate(181deg) brightness(96%) contrast(94%);
+}
+
+.active{
+    flex-grow: 1;
+    margin-top: 15px;
+    filter: invert(55%) sepia(39%) saturate(689%) hue-rotate(181deg) brightness(96%) contrast(94%) !important;
+}
+
+.menu_item{
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.svg{
+    padding: 0 12%;
+    filter: invert(24%) sepia(50%) saturate(395%) hue-rotate(169deg) brightness(95%) contrast(92%);
+}
+
+#menu {
+    padding: 0 40% 0 15%;
+    margin : 0;
+}
+
+/* Style banner */
+#banner{
+    position: fixed;
+    left:10px;
+    top:10px;
+    width:90px;
+    margin-top: 0;
+}
+
+/*#navigation{
+    position:fixed;
+    top: 0;
+    background-color: #c9ccf0;
+}*/
+
+/* Style image and quote on the home page */
+.motorimg{
+    display: flex;
+}
+
+.motorimg img{
+    margin: auto;
+}
+
+.quote{
+    margin: auto;
+    font-family: "Brush Script MT", "Segoe Script", "Segoe Print";
+    font-size: 40px;
+}
+
+/* Style welcome message to the logged-in user */
+.myuser{
+    text-align: left;
+    margin-top: 55px;
+    margin-left: 22px;
+    font-size: 15px;
+}
+
+.myuser span{
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+/* Style logout button in the right top corner */
+#logout{
+    position: fixed;
+    right:0px;
+    top:10px;
+    width:60px;
+    border: none;
+    font-size: 15px;
+    background: none;
+    cursor: pointer;
+}
+
+#logout:hover{
+    filter: invert(55%) sepia(39%) saturate(689%) hue-rotate(181deg) brightness(96%) contrast(94%);
+}
+
+button.logout{
+    background:none;
+    width: 90px;
+    border: 0;
+    position: relative;
+    padding: 0;
+    top: 26px;
+    right: 90px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Style table */
+.table-wrapper{
+    margin: 0% 15% 5%;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: cornflowerblue;
+}
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Style headers */
+h1, h2 {
+    text-align: center;
+}
+
+h2{
+    font-size: 14px;
+}
+
+/* Style list elements */
+li {
+    list-style-type: none;
+    text-align: left;
+}
+
+/* Style input in forms - also buttons */
+input{
+    font-size: 16px;
+    border: none;
+    text-decoration: none;
+}
+
+input:hover{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+/* Style form */
+fieldset{
+    border:1px solid lightgrey;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    background-color: whitesmoke;
+    max-width:500px;
+    padding:16px;
+    color: black;
+    margin: auto;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+fieldset input{
+    font-size: 14px;
+    text-decoration: none;
+    border:1px solid lightgrey;
+    border-radius: 4px;
+}
+
+fieldset input:hover{
+    border: 1px solid cornflowerblue;
+    background-color: white;
+    color: black;
+}
+
+fieldset select{
+    border-radius: 4px;
+}
+
+fieldset p{
+    color: #324960;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top:0;
+}
+
+fieldset label{
+    font-size:14px;
+}
+
+fieldset small{
+    font-size: 10px;
+    color: #a7a7a7;
+}
+
+h1.heading{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+input.btn-submit-add{
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 4px;
+    display:block;
+}
+
+.select-dates{
+    margin-left: 75px;
+}
+
+/* Style buttons which are below the menu*/
+.btn-undermenu{
+    display: inline-block;
+    margin: 5% 0% 2% 15%;
+}
+
+.btn-undermenu-next{
+    display: inline-block;
+    margin: 5% 0% 2% 2%;
+}
+
+.btn-undermenu-next .btn-add{
+    width: 170px;
+}
+
+.undermenu_button{
+    padding: 0;
+}
+
+.wrapper-undermenu {
+    margin: 5% 15% 2%;
+}
+
+.btn-body{
+    align-content: center;
+    margin: 0% 45% 2%;
+}
+
+.search_button{
+    padding: 0;
+}
+
+.btn-search{
+    width:10px;
+    border: none;
+    font-size: 15px;
+    background: none;
+    position:relative;
+    bottom: 18px;
+}
+
+.btn-add{
+    width:100px;
+    border: none;
+    font-size: 15px;
+    background: none;
+    position:relative;
+    bottom: 8px;
+    cursor: pointer;
+}
+
+.btn-back{
+    width:10px;
+    border: none;
+    font-size: 15px;
+    background: none;
+    position:relative;
+    bottom: 8px;
+}
+
+.btn-undermenu:hover{
+    filter: invert(55%) sepia(39%) saturate(689%) hue-rotate(181deg) brightness(96%) contrast(94%);
+}
+
+.btn-undermenu-next:hover{
+    filter: invert(55%) sepia(39%) saturate(689%) hue-rotate(181deg) brightness(96%) contrast(94%);
+}
+
+.btn-body:hover{
+    filter: invert(55%) sepia(39%) saturate(689%) hue-rotate(181deg) brightness(96%) contrast(94%);
+}
+
+/* Style actions buttons in table*/
+.btn-action{
+    border: none;
+    color: white;
+    background-color: #324960;
+    cursor: pointer;
+}
+
+.btn-action-disabled{
+    border: none;
+    color: white;
+    background-color: #324960;
+    opacity: 50%;
+}
+
+.btn-cancel-disabled{
+    border: none;
+    color: white;
+    background-color: #FF5733;
+    opacity: 50%;
+}
+
+.btn-cancel{
+    border: none;
+    color: white;
+    background-color: #FF5733;
+    cursor: pointer;
+}
+
+.btn-action:hover{
+    color: #324960;
+    background-color: white;
+}
+
+.btn-cancel:hover{
+    color: #324960;
+    background-color: white;
+}
+
+.fl-table tr:nth-child(even) .btn-action:hover {
+    background: #f8f8f8;
+}
+
+.fl-table tr:nth-child(even) .btn-cancel:hover {
+    background: #f8f8f8;
+}
+
+/* Remove underline from buttons */
+.btn-undermenu a{
+    text-decoration: none;
+}
+
+.btn-undermenu-next a{
+    text-decoration: none;
+}
+
+td a{
+    text-decoration: none;
+}
+
+/* Remove the blue outline around buttons while being pressed */
+button:focus {
+    outline: 0;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.element {
+    display: inline-block;
+    margin: 6px;
+    font-size: 20px;
+}
+
+/* Display columns on SHOW pages*/
+.grid-container{
+    display: grid;
+    margin : 0;
+    padding: 1em 15%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+}
+
+.grid-container h2{
+    text-align: left;
+    font-size: 1em;
+}
+
+.grid-container ul{
+    padding-inline-start: 0;
+}
+
+/* Change color on read only input fields in the form */
+.read-only{
+    pointer-events: none;
+    background-color: #EBEBE4;
+}
+
+/* Style invoice */
+.invoice-box {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+.invoice-box table {
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+}
+
+.invoice-box table td {
+    padding: 5px;
+    vertical-align: top;
+}
+
+.invoice-box table tr td:nth-child(2) {
+    text-align: right;
+}
+
+.invoice-box table tr.top table td {
+    padding-bottom: 20px;
+}
+
+.invoice-box table tr.top table td.title {
+    font-size: 45px;
+    line-height: 45px;
+    color: #333;
+}
+
+.invoice-box table tr.information table td {
+    padding-bottom: 40px;
+}
+
+.invoice-box table tr.heading td {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.invoice-box table tr.details td {
+    padding-bottom: 20px;
+}
+
+.invoice-box table tr.item td{
+    border-bottom: 1px solid #eee;
+}
+
+.invoice-box table tr.item.last td {
+    border-bottom: none;
+}
+
+.invoice-box table tr.total td:nth-child(2) {
+    border-top: 2px solid #eee;
+    font-weight: bold;
+}
+
+/* Style footer */
+footer {
+    background: cornflowerblue;
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Make footer sticky to the bottom using Flexbox */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_body {
+    flex: 1 0 auto;
+    margin-bottom: 5%;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+
+/* Responsive */
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}

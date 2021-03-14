@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!--Karolina-->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:insert="header :: header_template">
+    <title id="title">Add Vehicle</title>
+    <!-- import header part-->
+</head>
+<body>
+    <!-- import menu-->
+    <div th:insert="menu :: menu_template"></div>
+
+    <!-- back button-->
+    <div class="btn-undermenu">
+        <a th:href="@{/viewVehicles}">
+            <img src="http://localhost:8080/SVG/arrow-left-solid.svg" class="svg undermenu_button" height="30" width="30">
+            <button class="btn-back" style="cursor: pointer"><strong>BACK</strong></button>
+        </a>
+    </div>
+
+    <h1 class="heading">Add New Vehicle</h1>
+
+    <!-- form to insert information -->
+    <main class="main_body">
+        <form th:action="@{/addVehicle}" method="post">
+            <fieldset>
+                <p>Vehicle Information</p>
+                <label>Enter Plates:</label>
+                <input type="text" maxlength="12" pattern="[a-zA-Z0-9]+" title="Must contain only alphanumeric characters" name="plates" placeholder="ex. XM23640" required="required"><br><br>
+                <label>Enter brand:</label>
+                <input type="text" maxlength="12" pattern="[A-Z][a-z]+" title="Must start with a capital letter followed by lowercase letters." name="brand" placeholder="ex. Sunlight" required="required"><br><br>
+                <label>Type model:</label>
+                <input type="text" maxlength="45" pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+" title="Must contain only alphanumeric characters" name="model" placeholder="ex. V 66" required="required"><br><br>
+                <label>Enter Number of Beds*:</label>
+                <input type="number" min ="2" name="beds" placeholder="ex. 4" required="required"><br><br>
+                <label>Enter Price per Day*:</label>
+                <input type="number" min ="100" name="price" placeholder="ex. 400" required="required"><br><br>
+                <label >Select availability:</label>
+                <input type="radio" id="available" name="isAvailable" value="1" checked="checked">
+                <label for="available">available</label>
+                <input type="radio" id="unavailable" name="isAvailable" value="0">
+                <label for="unavailable">unavailable</label><br><br>
+            </fieldset><br>
+            <input class="btn-submit-add" type="submit" value="Submit Entry">
+        </form><br>
+        <p style="text-align: center; font-size: 14px;">*Please note that if entered brand and model already exist in our fleet,<br>the price and number of beds will be corrected automatically to match the type.</p>
+
+    </main>
+    <!-- import footer-->
+    <div th:insert="footer :: footer_template"></div>
+</body>
+</html>

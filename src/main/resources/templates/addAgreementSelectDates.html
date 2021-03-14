@@ -1,0 +1,40 @@
+<!DOCTYPE html> <!--Dimitrios--><!--Karolina-->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:insert="header :: header_template">
+    <title id="title">Add Agreement</title>
+    <!-- import header part-->
+</head>
+<body>
+    <!-- import menu-->
+    <div th:insert="menu :: menu_template"></div>
+    <!-- back button-->
+    <div class="btn-undermenu">
+        <a th:href="@{/agreement/viewAgreements}">
+            <img src="http://localhost:8080/SVG/arrow-left-solid.svg" class="svg undermenu_button" height="30" width="30">
+            <button class="btn-back" style="cursor: pointer"><strong>BACK</strong></button>
+        </a>
+    </div>
+    <main class="main_body">
+        <h1 class="heading">Add New Agreement</h1>
+        <form action="#" th:action="@{/agreement/create/selectDates}" th:object="${agreement}" method="post">
+            <fieldset style="width: 300px;">
+            <p>Time period, number of beds and price</p>
+                <div class="select-dates">
+                <label for="startDate">From:</label><br>
+                <input type="date" th:attr="min=${now}" id="startDate" name="startDate" required="required"><br>
+                <label for="endDate">To:</label><br>
+                <input type="date" th:attr="min=${now}" id="endDate" name="endDate" required="required"><br>
+                <label for="beds">Minimum number of beds:</label><br>
+                <input type="number" min="0" max="2147483647" title="Only numeric characters." id="beds" name="vehicle.beds" required="required" placeholder="ex. 4"><br>
+                <label for="price">Maximum price in EUR:</label><br>
+                <input type="number" min="0" max="2147483647" title="Only numeric characters." id="price" name="vehicle.price" required="required" placeholder="ex. 500"><br>
+                </div>
+            </fieldset><br>
+        <input class="btn-submit-add" type="submit" value="Find Available Vehicles">
+        </form>
+    </main>
+    <!-- import footer-->
+    <div th:insert="footer :: footer_template"></div>
+</body>
+</html>
+
