@@ -2,8 +2,6 @@ DROP DATABASE nordic;
 CREATE DATABASE nordic;
 USE nordic ;
 
-
-
 -- Table country
 
 CREATE TABLE country (
