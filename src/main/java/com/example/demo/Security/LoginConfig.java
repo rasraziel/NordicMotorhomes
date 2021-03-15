@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
 import javax.sql.DataSource;
 
@@ -37,9 +38,13 @@ public class LoginConfig extends WebSecurityConfigurerAdapter { //Ilias
                 .and() //used to chain methods
                 //basic login form
                 .formLogin().permitAll()
-                .loginPage("/login.html")
+                .loginPage("/login")
+                .defaultSuccessUrl("/", true)
+                .failureUrl("/login?error=true")
                 .and() //used to chain methods
-                .logout().permitAll();
+                .logout().permitAll()
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/login");
     }
 
 
