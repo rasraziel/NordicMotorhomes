@@ -37,6 +37,7 @@ public class LoginConfig extends WebSecurityConfigurerAdapter { //Ilias
                 .and() //used to chain methods
                 //basic login form
                 .formLogin().permitAll()
+                .loginPage("/login.html")
                 .and() //used to chain methods
                 .logout().permitAll();
     }
