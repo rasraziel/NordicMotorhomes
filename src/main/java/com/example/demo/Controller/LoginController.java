@@ -13,7 +13,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.util.List;
 
 @Controller
-@EnableWebMvc
 @ComponentScan("org.springframework.security.samples.mvc")
 public class LoginController extends WebMvcConfigurerAdapter {
 
